@@ -1,0 +1,13 @@
+:root {
+  --forest: #0a3323;
+  --sage: #839958;
+  --cream: #f7f4d5;
+  --rose: #d3968c;
+  --petrol: #105666;
+  --paper: #f7f4d5;
+
+  --font-sans: 'DM Sans', sans-serif;
+  --font-serif: 'Cormorant Garamond', serif;
+
+  --max-width: 1280px;
+}
