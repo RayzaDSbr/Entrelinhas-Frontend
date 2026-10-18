@@ -1,0 +1,12 @@
+.steps { padding: var(--section-padding); background: var(--sage); color: var(--cream); text-align: center; }
+.steps h2 { font-size: clamp(40px, 3.8vw, 48px); line-height: 1; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: 60px; text-align: left; }
+.image { height: 270px; position: relative; overflow: hidden; }
+.image img { filter: saturate(.5); }
+.number { position: absolute; left: 0; bottom: 0; background: var(--rose); color: var(--forest); width: 62px; height: 62px; display: grid; place-items: center; font: 500 23px var(--font-display); }
+.step h3 { margin-top: 22px; font: 500 30px var(--font-display); }
+.step p { margin-top: 12px; color: var(--cream); font-size: 16px; line-height: 1.65; }
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; gap: 50px; }
+}

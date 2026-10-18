@@ -1,0 +1,8 @@
+.logo { display: flex; flex-direction: column; align-items: center; font-family: var(--font-display); line-height: .85; }
+.logo span { font-size: 32px; font-weight: 600; }
+.logo small { margin-top: 9px; font: 500 8px var(--font-body); letter-spacing: .42em; }
+.light { color: var(--cream); }
+
+@media (max-width: 900px) {
+  .logo span { font-size: 27px; }
+}

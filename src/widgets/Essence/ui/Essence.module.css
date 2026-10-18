@@ -1,0 +1,35 @@
+.essence { padding: var(--section-padding); background: var(--rose); border-top: 1px solid rgba(10, 51, 35, .12); }
+.label { display: block; margin-bottom: 25px; color: var(--petrol); font-size: 16px; font-weight: 900; letter-spacing: .02em; }
+.heading { display: grid; grid-template-columns: 1.25fr .75fr; gap: 8vw; align-items: end; margin: 24px 0 48px; }
+.heading h2 { max-width: 760px; color: var(--forest); font-size: clamp(42px, 4vw, 56px); font-weight: 900; line-height: 1.08; letter-spacing: -.045em; }
+.heading h2 em { color: var(--petrol); font-style: normal; font-weight: 900; }
+.heading p { max-width: 520px; color: var(--forest); font-size: 18px; line-height: 1.75; }
+
+.benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.benefit { min-height: 300px; padding: 58px 40px 42px; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.benefit h3 { max-width: 260px; font-size: 24px; font-weight: 900; line-height: 1.25; }
+.benefit p { max-width: 280px; margin-top: 12px; font-size: 17px; line-height: 1.55; }
+
+.benefit:nth-child(1) { background: var(--sage); color: var(--forest); }
+.benefit:nth-child(1) h3 { color: var(--cream); font-weight: 700; }
+.benefit:nth-child(2) { background: var(--cream); color: var(--forest); }
+.benefit:nth-child(2) h3 { color: var(--sage); }
+.benefit:nth-child(3) { background: var(--petrol); color: var(--cream); }
+.benefit:nth-child(3) h3 { color: var(--rose); font-weight: 600; }
+
+/* "Flores" decorativas nos cantos dos cards */
+.benefit::before, .benefit::after { content: ""; position: absolute; z-index: 2; border-radius: 50%; }
+.benefit::before { width: 28px; height: 28px; }
+.benefit::after { width: 18px; height: 18px; }
+.benefit:nth-child(1)::before { top: -10px; left: 10px; background: var(--cream); box-shadow: 18px 0 var(--cream), -18px 0 var(--cream), 0 18px var(--cream), 0 -18px var(--cream), 13px 13px var(--cream), -13px 13px var(--cream), 13px -13px var(--cream), -13px -13px var(--cream); }
+.benefit:nth-child(1)::after { top: -5px; left: 15px; background: var(--forest); }
+.benefit:nth-child(2)::before { bottom: -8px; left: 10px; background: var(--petrol); box-shadow: 18px 0 var(--petrol), -18px 0 var(--petrol), 0 18px var(--petrol), 0 -18px var(--petrol), 13px 13px var(--petrol), -13px 13px var(--petrol), 13px -13px var(--petrol), -13px -13px var(--petrol); }
+.benefit:nth-child(2)::after { bottom: -3px; left: 15px; background: var(--cream); }
+.benefit:nth-child(3)::before { top: -8px; right: 10px; background: var(--sage); box-shadow: 18px 0 var(--sage), -18px 0 var(--sage), 0 18px var(--sage), 0 -18px var(--sage), 13px 13px var(--sage), -13px 13px var(--sage), 13px -13px var(--sage), -13px -13px var(--sage); }
+.benefit:nth-child(3)::after { top: -3px; right: 15px; background: var(--cream); }
+
+@media (max-width: 900px) {
+  .heading { grid-template-columns: 1fr; gap: 32px; }
+  .benefits { grid-template-columns: 1fr; }
+  .benefit { min-height: 250px; padding: 44px 28px; }
+}

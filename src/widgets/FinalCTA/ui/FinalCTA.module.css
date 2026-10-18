@@ -1,0 +1,10 @@
+.cta { min-height: 570px; background: var(--forest); color: var(--cream); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; position: relative; overflow: hidden; }
+.cta::before, .cta::after { content: ""; position: absolute; width: 260px; height: 370px; border: 1px solid rgba(247, 244, 213, .15); border-radius: 50%; transform: rotate(35deg); left: -120px; }
+.cta::after { left: auto; right: -120px; transform: rotate(-35deg); }
+.cta h2 { font-size: clamp(56px, 5.5vw, 76px); }
+.cta p { color: var(--cream); font-size: 18px; margin: 28px 0; }
+.cta .action { font-weight: 900; }
+
+@media (max-width: 900px) {
+  .cta { padding: 80px 25px; min-height: 530px; }
+}

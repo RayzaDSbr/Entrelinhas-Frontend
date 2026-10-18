@@ -1,0 +1,21 @@
+.kits { padding: var(--section-padding); background: var(--petrol); color: var(--cream); text-align: center; }
+.kits h2 { font-size: clamp(40px, 3.8vw, 48px); line-height: 1; }
+.label { display: block; margin-bottom: 25px; padding-bottom: 20px; font-size: 13px; font-weight: 600; letter-spacing: .25em; text-align: left; border-bottom: 1px solid rgba(247, 244, 213, .35); }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); align-items: center; max-width: 1180px; margin: 62px auto 20px; }
+.card { min-height: 430px; padding: 42px; background: var(--paper); color: var(--forest); border: 1px solid rgba(10, 51, 35, .15); text-align: left; position: relative; }
+.featured { min-height: 475px; padding-top: 62px; background: var(--forest); color: var(--cream); box-shadow: 0 22px 40px rgba(10, 51, 35, .16); z-index: 2; }
+.popular { position: absolute; top: 0; left: 0; right: 0; height: 33px; display: grid; place-items: center; color: var(--forest); background: var(--rose); font-size: 8px; letter-spacing: .24em; }
+.card > small { font-size: 12px; letter-spacing: .2em; }
+.card h3 { font: 500 38px var(--font-display); margin: 30px 0 5px; }
+.card strong { color: var(--rose); font: 600 29px var(--font-display); }
+.card ul { list-style: none; padding: 0; margin: 35px 0; min-height: 112px; border-top: 1px solid rgba(10, 51, 35, .16); }
+.card li { font-size: 15px; padding: 11px 0; border-bottom: 1px solid rgba(10, 51, 35, .1); }
+.featured li { border-color: rgba(247, 244, 213, .14); }
+.card button { width: 100%; border: 1px solid var(--forest); padding: 16px; color: var(--forest); background: transparent; display: flex; justify-content: space-between; text-transform: uppercase; font-size: 13px; font-weight: 900; letter-spacing: .08em; }
+.featured button { border-color: var(--rose); color: var(--forest); background: var(--rose); }
+.disclaimer { font-size: 13px; opacity: .85; }
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; gap: 14px; }
+  .card, .featured { min-height: auto; }
+}
