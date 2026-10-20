@@ -1,4 +1,4 @@
-# ✏️ Entrelinhas — Papelaria Personalizável
+# ✏️ Entrelinhas | Papelaria Personalizável
 
 <p align="left">
   <strong>Sua rotina, do seu jeito.</strong>
