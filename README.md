@@ -1,160 +1,290 @@
-# Entrelinhas
+# ✏️ Entrelinhas — Papelaria Personalizável
 
-## Sobre o produto
+<p align="center">
+  <strong>Sua rotina, do seu jeito.</strong>
+  <br />
+  Uma landing page para planners 2027 personalizáveis, desenvolvida com React e TypeScript.
+</p>
 
-**Entrelinhas** é uma papelaria conceitual (fictícia) que vende **planners 2027 personalizáveis**. A proposta da marca está no slogan *"Sua rotina, do seu jeito."*
+---
 
-Na landing page, a pessoa monta o próprio planner: escolhe o nome que vai na capa, a cor (verde-sálvia, rosé ou creme) e os refis que quer incluir (planejamento semanal, metas, controle financeiro, rastreador de hábitos e anotações livres). A prévia da capa muda em tempo real e o planner pode ser adicionado à sacola.
+## ✿ Sobre o projeto
 
-**Público:** estudantes, profissionais criativos e qualquer pessoa que goste de organizar a rotina com um caderno que tenha a sua personalidade.
+A **Entrelinhas** é uma papelaria conceitual e fictícia que vende **planners 2027 personalizáveis**, permitindo que cada pessoa crie um planner de acordo com seu estilo e suas necessidades.
 
-**O que a página apresenta**
+Na landing page, o usuário pode:
 
-| Requisito da atividade | Onde está |
-|---|---|
-| Identidade visual | Paleta em verde-floresta, sálvia, rosé, creme e petróleo, com as fontes Cormorant Garamond e DM Sans (`app/styles/variables.css`) |
+- ✏️ Personalizar o nome que aparece na capa.
+- ✏️ Escolher entre três cores: verde-sálvia, rosé e creme.
+- ✏️ Selecionar os refis que deseja incluir no planner.
+- ✏️ Visualizar a prévia da capa em tempo real.
+- ✏️ Adicionar o planner à sacola e acompanhar o contador no cabeçalho.
+
+Os refis disponíveis incluem planejamento semanal, metas, controle financeiro, rastreador de hábitos e anotações livres.
+
+**Público-alvo:** estudantes, profissionais criativos e pessoas que gostam de organizar a rotina com produtos que reflitam sua personalidade.
+
+> ✿ Projeto acadêmico desenvolvido para a atividade de Landing Page de Produto.
+
+## ✿ Requisitos da atividade
+
+| Requisito | Implementação |
+| :--- | :--- |
+| Identidade visual | Paleta em verde-floresta, sálvia, rosé, creme e petróleo, com Cormorant Garamond e DM Sans. |
 | Nome e proposta | `widgets/Header` e `widgets/Hero` |
 | Hero section | `widgets/Hero` |
 | Benefícios e diferenciais | `widgets/Essence` |
-| Imagens do produto | `widgets/Collection`, com as imagens em `shared/assets/images` |
+| Imagens do produto | `widgets/Collection` e `shared/assets/images` |
 | Como funciona | `widgets/Steps` |
-| Prova social | `widgets/Reviews` (relatos fictícios) |
-| Oferta e preço | `widgets/Kits` (preços fictícios) |
-| FAQ | `widgets/FAQ` (acordeão) |
-| CTA funcional | Personalizador do planner, com o botão "Adicionar ao carrinho" (`widgets/Customize`), que atualiza o contador da sacola no cabeçalho. Há também botões que rolam suavemente até as seções e um CTA final |
+| Prova social | `widgets/Reviews` — relatos fictícios |
+| Oferta e preço | `widgets/Kits` — preços fictícios |
+| FAQ | `widgets/FAQ` — acordeão interativo |
+| CTA funcional | `widgets/Customize`, com personalização e atualização do contador da sacola |
 
-A aplicação é 100% client-side: não há backend, banco de dados ou API, e todos os dados são mockados.
+Além disso, a página possui botões de navegação com rolagem suave entre as seções e uma chamada para ação final.
 
-## Arquitetura: FSD (Feature-Sliced Design)
+**Importante:** a aplicação é 100% client-side. Não utiliza backend, banco de dados ou API, e os dados apresentados são mockados.
 
-Entre as duas arquiteturas apresentadas em aula (MVVM e FSD), escolhi o **FSD**.
+---
 
-```
+## ✿ Arquitetura do projeto
+
+### Por que escolhi FSD?
+
+Entre as arquiteturas apresentadas em aula, **MVVM e FSD (Feature-Sliced Design)**, escolhi o FSD por se adequar melhor à estrutura da landing page.
+
+Como o projeto é composto por seções visuais independentes, o FSD permite organizar cada seção em um widget, mantendo os componentes, os estilos e as responsabilidades mais bem separados.
+
+### Estrutura de pastas
+
+```text
 src/
-  app/              # inicialização: main.tsx, App.tsx e estilos globais
-  pages/
-    Home/           # compõe os widgets e guarda o estado compartilhado
-  widgets/          # uma pasta por seção da landing page
-    Header/ Hero/ Essence/ Collection/ Customize/
-    Steps/ Kits/ Reviews/ FAQ/ FinalCTA/ Footer/
-      ui/           # componente .tsx + .module.css
-      model/        # dados específicos do widget (quando existem)
-      index.ts      # API pública do widget
-  features/
-    customize-kit/  # lógica de personalizar o planner (hook useCustomizeKit)
-  entities/         # dados mockados do domínio
-    product/ kit/ review/ faq/
-  shared/
-    ui/             # Button, Logo, Eyebrow, SectionHead
-    lib/            # scrollToSection, classNames
-    assets/         # imagens
+├── app/                  # Inicialização e estilos globais
+│   └── styles/           # Variáveis CSS
+├── pages/
+│   └── Home/             # Página principal e estado compartilhado
+├── widgets/              # Seções da landing page
+│   ├── Header/
+│   ├── Hero/
+│   ├── Essence/
+│   ├── Collection/
+│   ├── Customize/
+│   ├── Steps/
+│   ├── Kits/
+│   ├── Reviews/
+│   ├── FAQ/
+│   ├── FinalCTA/
+│   └── Footer/
+│       ├── ui/
+│       ├── model/
+│       └── index.ts
+├── features/
+│   └── customize-kit/    # Lógica de personalização do planner
+├── entities/             # Dados mockados do domínio
+│   ├── product/
+│   ├── kit/
+│   ├── review/
+│   └── faq/
+└── shared/
+    ├── ui/               # Componentes reutilizáveis
+    ├── lib/              # Funções utilitárias
+    └── assets/
+        └── images/
 ```
 
-**Regra de importação:** cada camada só importa das camadas abaixo dela (`app → pages → widgets → features → entities → shared`). Por isso, um widget nunca importa outro widget. O estado do planner é usado pelo `Header` (contador da sacola), pelo `Customize` (edição) e pelo `Kits` (reinício). Como esses widgets não podem se importar, o estado fica na página `Home`, que repassa os dados por props.
+Cada widget possui sua própria estrutura de interface (`ui/`), com componentes `.tsx` e arquivos CSS Module. Quando necessário, também possui `model/` para seus dados específicos e `index.ts` como API pública.
 
-**Por que FSD e não MVVM?** A landing page é formada por seções visuais independentes, com pouca regra de negócio, e o FSD organiza isso de forma natural: uma seção é um widget. O MVVM só faria sentido no personalizador, e mesmo ali o hook `useCustomizeKit` já faz o papel de ViewModel dentro da camada `features`.
+### ✏️ Regra de importação
 
-**Estilos:** cada componente tem seu CSS Module (`*.module.css`). As cores e fontes ficam como variáveis CSS em `app/styles/variables.css`.
+As dependências seguem esta direção:
 
-## Como rodar
+`app → pages → widgets → features → entities → shared`
+
+Cada camada pode utilizar as camadas inferiores, evitando dependências entre widgets.
+
+Como o `Header`, o `Customize` e o `Kits` precisam acessar ou alterar informações relacionadas ao planner, o estado compartilhado fica na página `Home`, que distribui os dados e as funções por meio de props.
+
+### ✏️ FSD ou MVVM?
+
+O FSD foi escolhido porque representa melhor a organização visual da landing page. O MVVM poderia ser aplicado ao personalizador, mas a lógica dessa funcionalidade já está concentrada no hook `useCustomizeKit`, localizado em `features/customize-kit`.
+
+### ✏️ Organização dos estilos
+
+- Cada componente possui seu próprio arquivo `*.module.css`.
+- As cores e as fontes globais ficam em `app/styles/variables.css`.
+- Os componentes reutilizáveis ficam em `shared/ui`, evitando a repetição de estilos.
+
+---
+
+## ✿ Tecnologias e ferramentas
+
+### Desenvolvimento
+
+- ✏️ React
+- ✏️ TypeScript
+- ✏️ Vite
+- ✏️ CSS Modules
+- ✏️ ESLint
+- ✏️ Visual Studio Code
+- ✏️ Git e GitHub
+
+### Design e inteligência artificial
+
+- ✏️ Figma Make — protótipo e primeira versão do código.
+- ✏️ Gemini — geração de imagens e experimentação com código.
+- ✏️ ChatGPT — geração de imagens e apoio na elaboração de ideias e documentação.
+- ✏️ Claude — apoio na arquitetura, organização dos arquivos e refatoração do projeto.
+
+---
+
+## ✿ Como executar o projeto
+
+### Pré-requisitos
+
+- Node.js instalado.
+- npm disponível no terminal.
+
+### Instalação
+
+Clone o repositório e entre na pasta do projeto:
+
+```bash
+git clone <URL_DO_REPOSITORIO>
+cd Entrelinhas-Frontend
+```
+
+Instale as dependências:
 
 ```bash
 npm install
+```
+
+Inicie o servidor de desenvolvimento:
+
+```bash
 npm run dev
 ```
 
-## Jornada de construção
+Depois, acesse o endereço local apresentado no terminal pelo Vite.
 
-### Ideia inicial
+---
 
-A ideia surgiu de uma necessidade pessoal: eu estava pesquisando cadernos para organizar o ano seguinte e decidi transformar isso no tema do projeto, criando uma papelaria em que a própria pessoa monta o seu planner.
+## ✿ Jornada de construção
 
-### Ferramentas utilizadas
+### 1. Ideia inicial
 
-- React com TypeScript
-- Vite
-- CSS Modules
-- ESLint
-- VS Code
-- Git e GitHub
-- Figma Make (protótipo e primeira versão do código)
-- Gemini e ChatGPT (geração das imagens do produto)
-- ChatGPT (também usado para complementar ideias)
-- Claude (arquitetura e refatoração do projeto)
+A ideia surgiu de uma necessidade pessoal: enquanto pesquisava cadernos para organizar o ano seguinte, percebi que poderia transformar essa experiência em um projeto acadêmico.
 
-### Uso de IA
+Assim nasceu a Entrelinhas, uma papelaria fictícia em que o próprio cliente pode montar seu planner e personalizá-lo de acordo com suas preferências.
 
-#### Figma Make
+### 2. Uso de inteligência artificial
 
-- **Para que usei:** criar o protótipo navegável da landing page e a primeira versão do código, que saiu em um único `App.tsx` com um `index.css` global.
-- **Por que escolhi:** o recurso de gerar protótipos é muito bom e eu tinha acesso à assinatura premium de estudante.
+As ferramentas de IA foram utilizadas em diferentes etapas do desenvolvimento, desde a criação do protótipo até a reorganização do código.
 
-#### Gemini
+#### ✏️ Figma Make
 
-- **Para que usei:** gerar imagens do produto e, no começo, também tentei usá-lo para gerar o código.
-- **Onde não foi satisfatório:** o código gerado não ficou bom, e por isso troquei o Gemini pelo Claude nessa parte. Nas imagens, a foto do caderno saiu com textos que eu não queria, então precisei pedir para refazer.
+**Como utilizei:** criei o protótipo navegável da landing page e gerei a primeira versão do código.
 
-#### ChatGPT
+**Resultado:** o código inicial estava concentrado em um único `App.tsx`, acompanhado de um `index.css` global. Essa versão serviu como ponto de partida para a evolução do projeto.
 
-- **Para que usei:** gerar imagens do produto e complementar as ideias do projeto.
+**Por que escolhi:** a ferramenta facilitou a criação do protótipo, e eu tinha acesso à assinatura premium para estudantes.
 
-#### Claude
+#### ✏️ Gemini
 
-- **Para que usei:**
-  - Revisar a estrutura de pastas que eu já tinha montado em FSD.
-  - Comparar FSD e MVVM e me ajudar a decidir.
-  - Gerar um script (`fix-structure.cjs`) para reorganizar as pastas automaticamente.
-  - Converter o código do Figma Make (um arquivo único com CSS global) para a arquitetura FSD com CSS Modules.
-  - Ajudar a escrever este README.
-- **Por que escolhi:** troquei o Gemini pelo Claude depois que o código gerado pelo Gemini não atendeu o que eu precisava.
+**Como utilizei:** experimentei a geração de código e utilizei a ferramenta para criar imagens dos produtos.
 
-#### Sugestões da IA que foram mantidas
+**Dificuldades encontradas:** o código gerado não atendeu às necessidades do projeto. Além disso, algumas imagens apresentaram textos indesejados nos cadernos, exigindo novas tentativas de geração.
 
-- Continuar com FSD em vez de migrar para MVVM.
-- Criar um `index.ts` em cada widget como API pública.
-- Separar cada seção em um widget com `ui/` e `.module.css`.
-- Criar `shared/ui` com `Button`, `Logo`, `Eyebrow` e `SectionHead` para não repetir CSS.
-- Colocar os dados mockados em `entities/`.
-- Concentrar a lógica do personalizador no hook `useCustomizeKit`, em `features/customize-kit`.
-- Mover o estado compartilhado para a página `Home`, já que widgets não podem importar outros widgets.
-- Remover `App.css` e `index.css` (sobras do template do Vite) e renomear `main.jsx` para `main.tsx`.
+**Decisão:** continuei utilizando as imagens após ajustes, mas optei por outra ferramenta para a refatoração do código.
 
-#### Sugestões da IA que foram alteradas
+#### ✏️ ChatGPT
 
-- O script gerou `pages/home` em minúsculas, mas a pasta do projeto já era `pages/Home`. Mantive `Home`, que segue o padrão dos nomes dos widgets.
-- Os imports ficaram relativos (`../../../shared/ui`) em vez de usar o alias `@/`, para não precisar alterar o `vite.config` e o `tsconfig`.
-- As imagens iniciais do protótipo foram trocadas pelas que gerei com IA.
-- As cores sugeridas pelo Figma Make foram alteradas.
+**Como utilizei:** gerei imagens dos produtos e complementei ideias para o desenvolvimento da página.
 
-#### Sugestões da IA que foram descartadas
+#### ✏️ Claude
 
-- MVVM como arquitetura.
-- A feature `join-waitlist` (lista de espera), porque o CTA do projeto é o personalizador, não um formulário.
-- O alias `@/` nos imports.
-- A imagem `covers-showcase.png`, que tem texto embutido e não se encaixou no layout.
-- O código gerado pelo Gemini, substituído pelo do Claude.
+**Como utilizei:**
 
-### Evolução da solução
+- Revisei a estrutura de pastas que havia montado com FSD.
+- Comparei as arquiteturas FSD e MVVM para apoiar a decisão arquitetural.
+- GereI um script `fix-structure.cjs` para reorganizar os diretórios automaticamente.
+- Converti o código inicial do Figma Make para a arquitetura FSD.
+- Separei os estilos globais em CSS Modules por componente.
+- Apoiei a documentação do projeto com este README.
 
-Entre a primeira versão do protótipo e a versão final, mudei as cores, as imagens, as fontes e o design geral da página.
+**Por que escolhi:** após experimentar o Gemini para gerar o código, percebi que precisava de uma solução mais adequada à estrutura que pretendia implementar. Por isso, passei a utilizar o Claude nessa etapa.
 
-**Do código do Figma Make para o projeto final**
+### 3. Sugestões de IA que foram mantidas
 
-- **Estrutura:** um único `App.tsx` com todas as seções virou 11 widgets, uma página (`Home`) e as camadas `features`, `entities` e `shared`.
-- **Estilos:** o `index.css` global, com classes em kebab-case e importação do Tailwind, foi dividido em um CSS Module por componente, com as cores e fontes em `variables.css`.
-- **Estado:** os `useState` que ficavam todos no `App` foram para o hook `useCustomizeKit` e, de lá, para a página `Home`.
-- **Componentes repetidos:** botões, logo e cabeçalho de seção viraram componentes compartilhados.
-- **Dados:** produtos, kits, avaliações e perguntas do FAQ saíram do JSX e foram para `entities/`.
-- **Acessibilidade:** os botões de cor e de refis usam `aria-pressed`, o FAQ usa `aria-expanded` e o campo de nome da capa tem `label` associado.
-- **Limpeza:** removi elementos que o CSS original já escondia (números e ícones dos cards de benefícios).
+- ✏️ Manter a arquitetura FSD em vez de migrar para MVVM.
+- ✏️ Criar um `index.ts` em cada widget como API pública.
+- ✏️ Separar as seções em widgets, com `ui/` e CSS Modules.
+- ✏️ Criar `shared/ui` com `Button`, `Logo`, `Eyebrow` e `SectionHead`.
+- ✏️ Organizar os dados mockados em `entities/`.
+- ✏️ Concentrar a lógica de personalização no hook `useCustomizeKit`.
+- ✏️ Manter o estado compartilhado na página `Home`.
+- ✏️ Remover os arquivos de estilo que sobraram do template do Vite e renomear `main.jsx` para `main.tsx`.
 
+### 4. Sugestões de IA que foram alteradas
 
-### Resultado final
-O resultado final foi satisfatório e gostei bastante dele, principalmente do layout que o Figma Make montou. Tive dificuldades ao usar o Gemini para gerar o código, mas, depois que passei para o Claude, o desenvolvimento ficou bem mais rápido.
+- ✏️ Mantive o diretório `pages/Home` com inicial maiúscula, seguindo o padrão de nomenclatura adotado no projeto.
+- ✏️ Utilizei imports relativos em vez do alias `@/`, evitando alterações adicionais no `vite.config` e no `tsconfig`.
+- ✏️ Substituí as imagens iniciais do protótipo por imagens geradas com IA.
+- ✏️ Modifiquei as cores sugeridas pelo Figma Make para adequá-las à identidade visual da marca.
 
-**O que eu faria diferente com mais tempo**
+### 5. Sugestões de IA que foram descartadas
 
-- Criar um menu para celular. Hoje a navegação some em telas menores que 900px e não há botão de menu.
-- Substituir as fotos da seção "Passo a passo", por imagens próprias, e otimizar as imagens do projeto.
-- Fazer uma finalização de pedido simulada (modal ou página) depois do "Adicionar ao carrinho".
-- Testar a responsividade em dispositivos reais e adicionar testes automatizados.
+- ✏️ A arquitetura MVVM como arquitetura principal.
+- ✏️ A feature `join-waitlist`, pois a proposta do projeto é a personalização do planner, e não a inscrição em uma lista de espera.
+- ✏️ O alias `@/` nos imports.
+- ✏️ A imagem `covers-showcase.png`, por conter texto embutido e não se adequar ao layout.
+- ✏️ O código gerado pelo Gemini, substituído pela versão refatorada com auxílio do Claude.
+
+---
+
+## ✿ Evolução da solução
+
+A primeira versão era um protótipo com todas as seções concentradas em um único arquivo. Durante o desenvolvimento, reorganizei a estrutura e refinei a identidade visual.
+
+| Aspecto | Versão inicial | Versão final |
+| :--- | :--- | :--- |
+| Estrutura | Um único `App.tsx` | Widgets, página e camadas do FSD |
+| Estilos | `index.css` global | CSS Modules e variáveis globais |
+| Estado | `useState` concentrado no `App` | Hook `useCustomizeKit` e estado compartilhado em `Home` |
+| Componentes | Elementos definidos nas próprias seções | Componentes reutilizáveis em `shared/ui` |
+| Dados | Informações diretamente no JSX | Dados mockados organizados em `entities/` |
+| Identidade visual | Cores e fontes do protótipo | Paleta, imagens e fontes ajustadas |
+
+### ✏️ Acessibilidade e organização
+
+- Os botões de escolha de cores e refis utilizam `aria-pressed`.
+- O FAQ utiliza `aria-expanded`.
+- O campo de nome da capa possui um `label` associado.
+- Os estilos foram separados por componente para facilitar a manutenção.
+- Elementos desnecessários que já estavam ocultos pelo CSS original, como números e ícones dos cards de benefícios, foram removidos.
+
+---
+
+## ✿ Resultado final
+
+O resultado foi satisfatório, principalmente pela identidade visual e pelo layout desenvolvido a partir do protótipo do Figma Make.
+
+Durante o processo, enfrentei dificuldades com a geração inicial do código, mas a reorganização da arquitetura e a separação dos componentes tornaram o projeto mais estruturado e facilitaram a manutenção.
+
+Mais do que desenvolver uma landing page, o projeto foi uma oportunidade de experimentar diferentes ferramentas de IA, avaliar sugestões, tomar decisões técnicas e compreender melhor a organização de uma aplicação React.
+
+### ✏️ O que eu faria diferente com mais tempo?
+
+- Criaria um menu de navegação para dispositivos móveis. Atualmente, a navegação desaparece em telas menores que 900 px e não há um botão de menu.
+- Substituiria as imagens da seção "Passo a passo" por imagens próprias.
+- Otimizaria as imagens utilizadas no projeto.
+- Implementaria uma finalização de pedido simulada, com modal ou página após o clique em "Adicionar ao carrinho".
+- Testaria a responsividade em dispositivos reais.
+
+---
+
+<p align="center">
+  ✏️ <strong>Entrelinhas — Sua rotina, do seu jeito.</strong>
+  <br />
+  <sub>Projeto acadêmico • React • TypeScript • Feature-Sliced Design</sub>
+</p>
