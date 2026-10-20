@@ -1,6 +1,6 @@
 # ✏️ Entrelinhas — Papelaria Personalizável
 
-<p align="center">
+<p align="left">
   <strong>Sua rotina, do seu jeito.</strong>
   <br />
   Uma landing page para planners 2027 personalizáveis, desenvolvida com React e TypeScript.
