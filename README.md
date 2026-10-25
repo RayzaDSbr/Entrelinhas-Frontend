@@ -265,6 +265,16 @@ A primeira versão era um protótipo com todas as seções concentradas em um ú
 
 ---
 
+## ✿ Atividade 02: Acessibilidade com MCP
+
+Na segunda atividade, avaliei a acessibilidade da landing page com o Playwright MCP no VS Code com Copilot Agent. Registrei o estado inicial, identifiquei barreiras e implementei melhorias de navegação, contraste, anúncios dinâmicos, movimento reduzido e textos alternativos.
+
+Os testes indicaram que a estrutura semântica e a hierarquia de títulos já estavam organizadas, mas também revelaram problemas que não apareciam apenas pela inspeção visual ou por um snapshot. Entre as mudanças realizadas estão o menu mobile, o link para pular ao conteúdo principal, a correção dos contrastes reprovados, a região de status para anunciar a inclusão na sacola e o suporte a `prefers-reduced-motion`.
+
+Documentei os testes, as medições e as capturas antes e depois em [`docs/evidencias/`](./docs/evidencias/). O relato do processo, incluindo os resultados e as limitações do MCP, está em [`docs/RELATO-ATIVIDADE-02.md`](./docs/RELATO-ATIVIDADE-02.md).
+
+---
+
 ## ✿ Resultado final
 
 O resultado foi satisfatório, principalmente pela identidade visual e pelo layout desenvolvido a partir do protótipo do Figma Make.
@@ -275,7 +285,6 @@ Mais do que desenvolver uma landing page, o projeto foi uma oportunidade de expe
 
 ### ✏️ O que eu faria diferente com mais tempo?
 
-- Criaria um menu de navegação para dispositivos móveis. Atualmente, a navegação desaparece em telas menores que 900 px e não há um botão de menu.
 - Substituiria as imagens da seção "Passo a passo" por imagens próprias.
 - Otimizaria as imagens utilizadas no projeto.
 - Implementaria uma finalização de pedido simulada, com modal ou página após o clique em "Adicionar ao carrinho".
