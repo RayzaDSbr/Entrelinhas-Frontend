@@ -1,12 +1,20 @@
 .header { height: 94px; padding: 0 max(5vw, 36px); display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(10, 51, 35, .18); position: relative; z-index: 5; }
-.nav { display: flex; gap: 34px; font-size: 15px; }
+.nav { font-size: 15px; }
+.desktopLinks { display: flex; gap: 34px; }
 .nav a { position: relative; }
 .nav a::after { content: ""; position: absolute; left: 0; right: 100%; bottom: -7px; height: 1px; background: var(--forest); transition: .25s; }
 .nav a:hover::after { right: 0; }
+.nav a:focus-visible, .menuButton:focus-visible, .bag:focus-visible { outline: 2px solid var(--petrol); outline-offset: 5px; }
+.menuButton, .mobileLinks { display: none; }
 .bag { color: var(--forest); background: none; border: 0; text-transform: uppercase; letter-spacing: .12em; font-size: 13px; display: flex; gap: 9px; align-items: center; }
 .bag span { display: grid; place-items: center; color: var(--cream); background: var(--forest); width: 25px; height: 25px; border-radius: 50%; }
 
-@media (max-width: 900px) {
+@media (width < 900px) {
   .header { height: 78px; padding: 0 20px; }
-  .nav { display: none; }
+  .nav { position: relative; }
+  .desktopLinks { display: none; }
+  .menuButton { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid var(--forest); border-radius: 50%; background: transparent; color: var(--forest); font-size: 23px; cursor: pointer; }
+  .mobileLinks:not([hidden]) { position: absolute; top: calc(100% + 14px); right: 0; display: grid; min-width: 220px; gap: 4px; margin: 0; padding: 12px; list-style: none; background: var(--cream); border: 1px solid rgba(10, 51, 35, .18); box-shadow: 0 12px 30px rgba(10, 51, 35, .14); }
+  .mobileLinks[hidden] { display: none; }
+  .mobileLinks a { padding: 12px; color: var(--forest); }
 }

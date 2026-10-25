@@ -3,5 +3,6 @@ export interface Kit {
   name: string
   price: string
   features: string[]
+  imageAlt: string
   featured?: boolean
 }

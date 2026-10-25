@@ -1,14 +1,14 @@
 .customize { padding: var(--section-padding); background: var(--rose); color: var(--cream); }
 .title { text-align: center; margin-bottom: 55px; }
-.title h2 { font-size: clamp(40px, 3.8vw, 48px); line-height: 1; }
-.title p { color: var(--cream); font-size: 18px; margin-top: 18px; }
+.title h2 { color: var(--text-on-rose); font-size: clamp(40px, 3.8vw, 48px); line-height: 1; }
+.title p { color: var(--text-on-rose); font-size: 18px; margin-top: 18px; }
 .grid { display: grid; grid-template-columns: .88fr 1.12fr; max-width: 1200px; margin: auto; box-shadow: 0 28px 80px rgba(10, 51, 35, .08); }
 
 /* ---- formulário ---- */
 .card { padding: 48px; background: var(--petrol); color: var(--forest); border: 1px solid rgba(10, 51, 35, .13); }
 .label { display: block; color: var(--cream); font: 500 20px var(--font-display); margin: 0 0 15px; }
 .label:not(:first-child) { margin-top: 34px; }
-.label span { font: 600 10px var(--font-body); color: var(--petrol); margin-right: 10px; }
+.label span { font: 600 10px var(--font-body); color: var(--cream); margin-right: 10px; }
 .refillsLabel span { color: var(--cream); }
 .input { width: 100%; border: 0; border-bottom: 1px solid var(--forest); padding: 12px 2px; background: transparent; color: var(--forest); outline: none; font-family: var(--font-display); font-size: 22px; }
 

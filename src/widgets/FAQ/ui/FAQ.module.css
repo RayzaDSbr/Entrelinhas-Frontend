@@ -1,13 +1,13 @@
 .faq { display: grid; grid-template-columns: .75fr 1.25fr; gap: 11vw; padding: var(--section-padding); background: var(--rose); color: var(--forest); border-top: 1px solid var(--petrol); }
 .title { position: sticky; top: 50px; align-self: start; }
 .title h2 { font-size: clamp(40px, 3.8vw, 48px); line-height: 1; }
-.title > p { margin-top: 25px; color: var(--petrol); font-size: 17px; }
+.title > p { margin-top: 25px; color: var(--text-on-rose); font-size: 17px; }
 .item { border-top: 1px solid rgba(16, 86, 102, .4); padding: 0 4px; }
 .item:last-child { border-bottom: 1px solid rgba(16, 86, 102, .4); }
 .question { width: 100%; border: 0; background: none; color: var(--forest); display: grid; grid-template-columns: 50px 1fr 25px; text-align: left; align-items: center; padding: 26px 0; font: 900 24px var(--font-display); }
-.number { font: 500 12px var(--font-body); color: var(--petrol); }
+.number { font: 500 12px var(--font-body); color: var(--text-on-rose); }
 .icon { color: var(--petrol); font: 300 24px var(--font-body); }
-.answer { padding: 0 50px 26px; color: var(--petrol); font-size: 16px; line-height: 1.7; max-width: 650px; }
+.answer { padding: 0 50px 26px; color: var(--text-on-rose); font-size: 16px; line-height: 1.7; max-width: 650px; }
 
 @media (max-width: 900px) {
   .faq { grid-template-columns: 1fr; gap: 32px; }

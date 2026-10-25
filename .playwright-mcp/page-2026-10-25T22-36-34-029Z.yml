@@ -1,0 +1,306 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]: Entrelinhas
+      - generic [ref=e6]: PAPELARIA
+    - navigation "Navegação principal" [ref=e7]:
+      - link "Início" [ref=e8] [cursor=pointer]:
+        - /url: "#inicio"
+      - link "Coleção 2027" [ref=e9] [cursor=pointer]:
+        - /url: "#colecao"
+      - link "Personalize o seu" [ref=e10] [cursor=pointer]:
+        - /url: "#personalize"
+      - link "Acessórios" [ref=e11] [cursor=pointer]:
+        - /url: "#kits"
+      - link "FAQ" [ref=e12] [cursor=pointer]:
+        - /url: "#faq"
+    - button "Abrir sacola" [ref=e13] [cursor=pointer]:
+      - text: Sacola
+      - generic [ref=e14]: "0"
+  - main [ref=e15]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e18]: COLEÇÃO 2027
+        - heading [level=1] [ref=e19]:
+          - text: Sua rotina,
+          - emphasis [ref=e20]: do seu jeito.
+        - paragraph [ref=e21]: Planeje seus dias, organize seus sonhos e transforme sua rotina em algo só seu. Conheça nossos planners personalizáveis e crie um espaço que tenha a sua personalidade.
+        - generic [ref=e22]:
+          - button "Monte seu planner →" [ref=e23] [cursor=pointer]:
+            - text: Monte seu planner
+            - generic [ref=e24]: →
+          - button "Conheça a coleção" [ref=e25] [cursor=pointer]
+        - generic [ref=e26]:
+          - generic [ref=e27]: ✦
+          - text: Feito com calma, para dias com intenção.
+      - generic [ref=e28]:
+        - img "Planner semanal aberto em tons pastel com flores e café" [ref=e29]
+        - generic [ref=e30]:
+          - text: "2027"
+          - generic [ref=e31]: NOVOSCOMEÇOS
+    - generic [ref=e32]:
+      - generic [ref=e33]: Nossa essência
+      - generic [ref=e34]:
+        - heading [level=2] [ref=e35]:
+          - text: Mais do que organizar, é sobre
+          - emphasis [ref=e36]: encontrar o seu jeito.
+        - paragraph [ref=e37]: Cada rotina é única. Por isso, acreditamos que seu planner também deve ser. Escolha os detalhes, monte suas páginas e crie um caderno que acompanhe seus planos, ideias e novos começos.
+      - generic [ref=e38]:
+        - article [ref=e39]:
+          - heading "Feito para você" [level=3] [ref=e40]
+          - paragraph [ref=e41]: Personalize a capa e escolha cada detalhe.
+        - article [ref=e42]:
+          - heading "Do seu jeito" [level=3] [ref=e43]
+          - paragraph [ref=e44]: Selecione as folhas de acordo com suas necessidades.
+        - article [ref=e45]:
+          - heading "Para cada novo plano" [level=3] [ref=e46]
+          - paragraph [ref=e47]: Organize estudos, trabalho, projetos e vida pessoal.
+    - generic [ref=e48]:
+      - generic [ref=e49]:
+        - generic [ref=e50]:
+          - generic [ref=e51]: COLEÇÃO 2027
+          - heading [level=2] [ref=e52]:
+            - text: Encontre o seu
+            - emphasis [ref=e53]: próximo capítulo.
+        - paragraph [ref=e54]: Produtos pensados para acompanhar todos os seus planos, dos dias corridos aos sonhos que ainda estão no papel.
+      - generic [ref=e55]:
+        - article [ref=e56]:
+          - generic [ref=e57]:
+            - img "Planner 2027 Personalizado" [ref=e58]
+            - generic [ref=e59]: "01"
+          - generic [ref=e60]:
+            - heading "Planner 2027 Personalizado" [level=3] [ref=e61]
+            - paragraph [ref=e62]: Capa autoral, calendário anual e planejamento mensal e semanal.
+            - strong [ref=e63]: R$ 89,90
+            - button "Ver detalhes ↗" [ref=e64] [cursor=pointer]
+        - article [ref=e65]:
+          - generic [ref=e66]:
+            - img "Refis Personalizados" [ref=e67]
+            - generic [ref=e68]: "02"
+          - generic [ref=e69]:
+            - heading "Refis Personalizados" [level=3] [ref=e70]
+            - paragraph [ref=e71]: Páginas para metas, hábitos, finanças e todos os seus planos.
+            - strong [ref=e72]: a partir de R$ 14,90
+            - button "Ver detalhes ↗" [ref=e73] [cursor=pointer]
+        - article [ref=e74]:
+          - generic [ref=e75]:
+            - img "Kit de Acessórios" [ref=e76]
+            - generic [ref=e77]: "03"
+          - generic [ref=e78]:
+            - heading "Kit de Acessórios" [level=3] [ref=e79]
+            - paragraph [ref=e80]: Adesivos, marcadores, divisórias e cartões de metas coordenados.
+            - strong [ref=e81]: R$ 24,90
+            - button "Ver detalhes ↗" [ref=e82] [cursor=pointer]
+        - article [ref=e83]:
+          - generic [ref=e84]:
+            - img "Kit Completo 2027" [ref=e85]
+            - generic [ref=e86]: "04"
+          - generic [ref=e87]:
+            - heading "Kit Completo 2027" [level=3] [ref=e88]
+            - paragraph [ref=e89]: Planner personalizado, seleção de refis e acessórios.
+            - strong [ref=e90]: R$ 119,90
+            - button "Ver detalhes ↗" [ref=e91] [cursor=pointer]
+    - generic [ref=e92]:
+      - generic [ref=e93]:
+        - generic [ref=e94]: FEITO POR VOCÊ
+        - heading [level=2] [ref=e95]:
+          - text: Um planner que tem
+          - emphasis [ref=e96]: a sua cara.
+        - paragraph [ref=e97]: Você escolhe os detalhes. A gente imagina as possibilidades.
+      - generic [ref=e98]:
+        - generic [ref=e99]:
+          - generic [ref=e100]: 01 Nome para a capa
+          - textbox "01 Nome para a capa" [ref=e101]:
+            - /placeholder: Meu Planner
+            - text: Meu Planner
+          - paragraph [ref=e102]: 02 Escolha a cor da capa
+          - generic [ref=e103]:
+            - button "Verde-sálvia" [pressed] [ref=e104] [cursor=pointer]
+            - button "Rosé" [ref=e106] [cursor=pointer]
+            - button "Creme" [ref=e108] [cursor=pointer]
+          - paragraph [ref=e110]: 03 Escolha seus refis
+          - generic [ref=e111]:
+            - button "✓ Planejamento semanal" [pressed] [ref=e112] [cursor=pointer]:
+              - generic [ref=e113]: ✓
+              - text: Planejamento semanal
+            - button "Metas e objetivos" [ref=e114] [cursor=pointer]
+            - button "Controle financeiro" [ref=e116] [cursor=pointer]
+            - button "Rastreador de hábitos" [ref=e118] [cursor=pointer]
+            - button "✓ Anotações livres" [pressed] [ref=e120] [cursor=pointer]:
+              - generic [ref=e121]: ✓
+              - text: Anotações livres
+          - button "Adicionar ao carrinho →" [ref=e122] [cursor=pointer]:
+            - text: Adicionar ao carrinho
+            - generic [ref=e123]: →
+        - generic [ref=e124]:
+          - generic [aria-hidden] [ref=e125]: ⌇
+          - generic [ref=e138]:
+            - generic [ref=e139]: PLANNER 2027
+            - strong [ref=e140]: Meu Planner
+            - generic [ref=e141]: ENTRELINHAS
+          - generic [ref=e143]:
+            - generic [ref=e144]: ✦
+            - paragraph [ref=e145]:
+              - text: Criado por você,
+              - emphasis [ref=e146]: pensado para a sua rotina.
+          - generic [ref=e147]:
+            - text: "2"
+            - generic [ref=e148]: REFISSELECIONADOS
+    - generic [ref=e149]:
+      - generic [ref=e150]: PASSO A PASSO
+      - heading [level=2] [ref=e151]:
+        - text: Criar o seu é
+        - emphasis [ref=e152]: simples.
+      - generic [ref=e153]:
+        - article [ref=e154]:
+          - generic [ref=e155]: "01"
+          - heading "Escolha sua capa" [level=3] [ref=e157]
+          - paragraph [ref=e158]: Selecione a cor e personalize o nome.
+        - article [ref=e159]:
+          - generic [ref=e160]: "02"
+          - heading "Monte suas páginas" [level=3] [ref=e162]
+          - paragraph [ref=e163]: Escolha os refis que fazem sentido para sua rotina.
+        - article [ref=e164]:
+          - generic [ref=e165]: "03"
+          - heading "Prepare-se para um novo ano" [level=3] [ref=e167]
+          - paragraph [ref=e168]: Visualize sua combinação e finalize seu pedido.
+    - generic [ref=e169]:
+      - generic [ref=e170]: ESCOLHA O SEU
+      - heading [level=2] [ref=e171]:
+        - text: Seu jeito de planejar
+        - emphasis [ref=e172]: começa aqui.
+      - generic [ref=e173]:
+        - article [ref=e174]:
+          - generic [ref=e175]: "01"
+          - heading "Essencial" [level=3] [ref=e176]
+          - strong [ref=e177]: R$ 89,90
+          - list [ref=e178]:
+            - listitem [ref=e179]: ✓ Planner personalizado
+            - listitem [ref=e180]: ✓ Capa com nome
+            - listitem [ref=e181]: ✓ Miolo padrão 2027
+          - button "Escolher este kit →" [ref=e182] [cursor=pointer]:
+            - text: Escolher este kit
+            - generic [ref=e183]: →
+        - article [ref=e184]:
+          - generic [ref=e185]: MAIS ESCOLHIDO
+          - generic [ref=e186]: "02"
+          - heading "Personalizado" [level=3] [ref=e187]
+          - strong [ref=e188]: R$ 104,90
+          - list [ref=e189]:
+            - listitem [ref=e190]: ✓ Planner personalizado
+            - listitem [ref=e191]: ✓ Capa com nome
+            - listitem [ref=e192]: ✓ 2 refis à sua escolha
+            - listitem [ref=e193]: ✓ Divisórias coordenadas
+          - button "Escolher este kit →" [ref=e194] [cursor=pointer]:
+            - text: Escolher este kit
+            - generic [ref=e195]: →
+        - article [ref=e196]:
+          - generic [ref=e197]: "03"
+          - heading "Completo" [level=3] [ref=e198]
+          - strong [ref=e199]: R$ 119,90
+          - list [ref=e200]:
+            - listitem [ref=e201]: ✓ Planner personalizado
+            - listitem [ref=e202]: ✓ Seleção de refis
+            - listitem [ref=e203]: ✓ Kit de acessórios
+            - listitem [ref=e204]: ✓ Embalagem especial
+          - button "Escolher este kit →" [ref=e205] [cursor=pointer]:
+            - text: Escolher este kit
+            - generic [ref=e206]: →
+      - paragraph [ref=e207]: "* Preços fictícios para apresentação deste projeto conceitual."
+    - generic [ref=e208]:
+      - generic [ref=e209]:
+        - generic [ref=e210]:
+          - generic [ref=e211]: IMPRESSÕES
+          - heading [level=2] [ref=e212]:
+            - text: Pequenos detalhes,
+            - emphasis [ref=e213]: novos começos.
+        - paragraph [ref=e214]: Conteúdo demonstrativo — histórias fictícias inspiradas em diferentes jeitos de planejar.
+      - generic [ref=e215]:
+        - article [ref=e216]:
+          - generic [ref=e217]: “
+          - paragraph [ref=e218]: “A possibilidade de escolher minhas próprias páginas torna o planejamento muito mais pessoal.”
+          - generic [ref=e219]:
+            - generic [ref=e220]: M
+            - generic [ref=e221]:
+              - text: M. A.
+              - generic [ref=e222]: Estudante · relato fictício
+        - article [ref=e223]:
+          - generic [ref=e224]: “
+          - paragraph [ref=e225]: “A combinação das cores e o cuidado com os detalhes deixam tudo ainda mais especial.”
+          - generic [ref=e226]:
+            - generic [ref=e227]: C
+            - generic [ref=e228]:
+              - text: C. L.
+              - generic [ref=e229]: Designer · relato fictício
+        - article [ref=e230]:
+          - generic [ref=e231]: “
+          - paragraph [ref=e232]: “Finalmente encontrei um formato de organização que combina com a minha rotina.”
+          - generic [ref=e233]:
+            - generic [ref=e234]: R
+            - generic [ref=e235]:
+              - text: R. F.
+              - generic [ref=e236]: Arquiteta · relato fictício
+    - generic [ref=e237]:
+      - generic [ref=e238]:
+        - generic [ref=e239]: PERGUNTAS FREQUENTES
+        - heading [level=2] [ref=e240]:
+          - text: Ficou com alguma
+          - emphasis [ref=e241]: dúvida?
+        - paragraph [ref=e242]: A gente ajuda você a colocar cada ideia no papel.
+      - generic [ref=e243]:
+        - article [ref=e244]:
+          - button "01 Como funciona a personalização do planner? −" [expanded] [ref=e245] [cursor=pointer]:
+            - generic [ref=e246]: "01"
+            - generic [ref=e247]: Como funciona a personalização do planner?
+            - generic [ref=e248]: −
+          - paragraph [ref=e249]: Você escolhe a cor, o nome da capa e os refis. A prévia mostra sua combinação antes de adicionar ao carrinho.
+        - article [ref=e250]:
+          - button "02 Posso escolher diferentes tipos de refis? +" [ref=e251] [cursor=pointer]:
+            - generic [ref=e252]: "02"
+            - generic [ref=e253]: Posso escolher diferentes tipos de refis?
+            - generic [ref=e254]: +
+        - article [ref=e255]:
+          - button "03 Posso comprar apenas folhas avulsas? +" [ref=e256] [cursor=pointer]:
+            - generic [ref=e257]: "03"
+            - generic [ref=e258]: Posso comprar apenas folhas avulsas?
+            - generic [ref=e259]: +
+        - article [ref=e260]:
+          - button "04 Quais opções de capas estão disponíveis? +" [ref=e261] [cursor=pointer]:
+            - generic [ref=e262]: "04"
+            - generic [ref=e263]: Quais opções de capas estão disponíveis?
+            - generic [ref=e264]: +
+        - article [ref=e265]:
+          - button "05 Como funciona o pedido? +" [ref=e266] [cursor=pointer]:
+            - generic [ref=e267]: "05"
+            - generic [ref=e268]: Como funciona o pedido?
+            - generic [ref=e269]: +
+        - article [ref=e270]:
+          - button "06 Posso alterar minha personalização antes de finalizar? +" [ref=e271] [cursor=pointer]:
+            - generic [ref=e272]: "06"
+            - generic [ref=e273]: Posso alterar minha personalização antes de finalizar?
+            - generic [ref=e274]: +
+    - generic [ref=e275]:
+      - generic [ref=e276]: SEU 2027 COMEÇA AQUI
+      - heading [level=2] [ref=e277]:
+        - text: Um novo ano.
+        - emphasis [ref=e278]: Mil possibilidades.
+      - paragraph [ref=e279]: Comece 2027 com espaço para tudo o que você deseja construir.
+      - button "Criar meu planner →" [ref=e280] [cursor=pointer]:
+        - text: Criar meu planner
+        - generic [ref=e281]: →
+  - contentinfo [ref=e282]:
+    - generic [ref=e283]:
+      - generic [ref=e284]:
+        - generic [ref=e285]: Entrelinhas
+        - generic [ref=e286]: PAPELARIA
+      - paragraph [ref=e287]: Sua rotina, do seu jeito.
+    - generic [ref=e288]:
+      - link "Coleção 2027" [ref=e289] [cursor=pointer]:
+        - /url: "#colecao"
+      - link "Personalize" [ref=e290] [cursor=pointer]:
+        - /url: "#personalize"
+      - link "Kits" [ref=e291] [cursor=pointer]:
+        - /url: "#kits"
+      - link "FAQ" [ref=e292] [cursor=pointer]:
+        - /url: "#faq"
+    - generic [ref=e293]: MARCA CONCEITUALPROJETO DEMONSTRATIVO · 2027

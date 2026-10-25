@@ -6,9 +6,10 @@ import styles from './Customize.module.css'
 
 interface CustomizeProps {
   kit: CustomizeKit
+  onAddToCart: () => void
 }
 
-export function Customize({ kit }: CustomizeProps) {
+export function Customize({ kit, onAddToCart }: CustomizeProps) {
   const title = kit.name || 'Meu Planner'
 
   return (
@@ -58,7 +59,7 @@ export function Customize({ kit }: CustomizeProps) {
             })}
           </div>
 
-          <Button variant="add" className={styles.addButton} icon={kit.added ? '✓' : '→'} onClick={kit.addToCart}>
+          <Button variant="add" className={styles.addButton} icon={kit.added ? '✓' : '→'} onClick={onAddToCart}>
             {kit.added ? 'Adicionado à sacola' : 'Adicionar ao carrinho'}
           </Button>
         </div>

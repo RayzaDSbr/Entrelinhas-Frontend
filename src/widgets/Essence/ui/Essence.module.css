@@ -10,10 +10,10 @@
 .benefit h3 { max-width: 260px; font-size: 24px; font-weight: 900; line-height: 1.25; }
 .benefit p { max-width: 280px; margin-top: 12px; font-size: 17px; line-height: 1.55; }
 
-.benefit:nth-child(1) { background: var(--sage); color: var(--forest); }
+.benefit:nth-child(1) { background: var(--sage-deep); color: var(--text-on-sage); }
 .benefit:nth-child(1) h3 { color: var(--cream); font-weight: 700; }
 .benefit:nth-child(2) { background: var(--cream); color: var(--forest); }
-.benefit:nth-child(2) h3 { color: var(--sage); }
+.benefit:nth-child(2) h3 { color: var(--text-sage-on-cream); }
 .benefit:nth-child(3) { background: var(--petrol); color: var(--cream); }
 .benefit:nth-child(3) h3 { color: var(--rose); font-weight: 600; }
 

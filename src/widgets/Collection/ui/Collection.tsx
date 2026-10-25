@@ -15,7 +15,7 @@ export function Collection() {
         {products.map((product, index) => (
           <article className={styles.product} key={product.id}>
             <div className={styles.image}>
-              <img src={product.image} alt={product.title} />
+              <img src={product.image} alt={product.imageAlt} />
               <span className={styles.number}>0{index + 1}</span>
             </div>
             <div className={styles.info}>

@@ -1,10 +1,15 @@
 :root {
   --forest: #0a3323;
   --sage: #839958;
+  --sage-deep: #5f733c;
   --cream: #f7f4d5;
   --rose: #d3968c;
   --petrol: #105666;
   --paper: #f7f4d5;
+
+  --text-on-sage: var(--cream);
+  --text-sage-on-cream: var(--sage-deep);
+  --text-on-rose: var(--forest);
 
   --font-body: "DM Sans", sans-serif;
   --font-display: "Cormorant Garamond", serif;

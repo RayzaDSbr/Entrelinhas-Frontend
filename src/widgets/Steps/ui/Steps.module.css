@@ -1,4 +1,4 @@
-.steps { padding: var(--section-padding); background: var(--sage); color: var(--cream); text-align: center; }
+.steps { padding: var(--section-padding); background: var(--sage-deep); color: var(--text-on-sage); text-align: center; }
 .steps h2 { font-size: clamp(40px, 3.8vw, 48px); line-height: 1; }
 .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: 60px; text-align: left; }
 .image { height: 270px; position: relative; overflow: hidden; }
