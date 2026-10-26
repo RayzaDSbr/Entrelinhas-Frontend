@@ -7,6 +7,11 @@
 </p>
 
 ---
+> [!IMPORTANT]
+> **Atividade 02: Evolução com MCP (Playwright MCP, acessibilidade)**
+> - 📄 [Relato das modificações](docs/RELATO-ATIVIDADE-02.md)
+> - 🗂️ [Evidências antes/depois](docs/evidencias/)
+> - 📊 [Comparativo](docs/evidencias/comparativo.md)
 
 ## ✿ Sobre o projeto
 
