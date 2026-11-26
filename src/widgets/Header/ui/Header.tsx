@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import type { RefObject } from 'react'
 import { Logo } from '../../../shared/ui'
 import { navLinks } from '../model/links'
 import styles from './Header.module.css'
@@ -8,9 +9,12 @@ const mobileMenuId = 'mobile-navigation-links'
 
 interface HeaderProps {
   cartCount: number
+  cartOpen: boolean
+  cartButtonRef: RefObject<HTMLButtonElement | null>
+  onCartClick: () => void
 }
 
-export function Header({ cartCount }: HeaderProps) {
+export function Header({ cartCount, cartOpen, cartButtonRef, onCartClick }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false)
   const menuButtonRef = useRef<HTMLButtonElement>(null)
 
@@ -58,7 +62,15 @@ export function Header({ cartCount }: HeaderProps) {
           ))}
         </ul>
       </nav>
-      <button className={styles.bag} aria-label={`Abrir sacola, ${cartCount} ${cartCount === 1 ? 'item' : 'itens'}`}>
+      <button
+        ref={cartButtonRef}
+        className={styles.bag}
+        type="button"
+        aria-label={`Abrir sacola, ${cartCount} ${cartCount === 1 ? 'item' : 'itens'}`}
+        aria-expanded={cartOpen}
+        aria-controls="shopping-bag-drawer"
+        onClick={onCartClick}
+      >
         Sacola <span>{cartCount}</span>
       </button>
     </header>

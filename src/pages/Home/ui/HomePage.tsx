@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { coverOptions, useCustomizeKit } from '../../../features/customize-kit'
+import { useRef, useState } from 'react'
+import { coverOptions, layoutOptions, useCustomizeKit } from '../../../features/customize-kit'
 import { scrollToSection } from '../../../shared/lib'
 import { VisuallyHidden } from '../../../shared/ui'
 import { Header } from '../../../widgets/Header'
@@ -13,6 +13,7 @@ import { Reviews } from '../../../widgets/Reviews'
 import { FAQ } from '../../../widgets/FAQ'
 import { FinalCTA } from '../../../widgets/FinalCTA'
 import { Footer } from '../../../widgets/Footer'
+import { CartDrawer } from '../../../widgets/Cart'
 import styles from './HomePage.module.css'
 
 export function HomePage() {
@@ -21,6 +22,8 @@ export function HomePage() {
   // Widgets não importam outros widgets, então a página faz a ligação.
   const kit = useCustomizeKit()
   const [announcement, setAnnouncement] = useState('')
+  const [cartOpen, setCartOpen] = useState(false)
+  const cartButtonRef = useRef<HTMLButtonElement>(null)
 
   const handleChooseKit = () => {
     kit.resetAdded()
@@ -30,14 +33,28 @@ export function HomePage() {
   const handleAddToCart = () => {
     kit.addToCart()
     const coverLabel = coverOptions.find((option) => option.id === kit.cover)?.label ?? 'Verde-sálvia'
+    const layoutLabel = layoutOptions.find((option) => option.id === kit.layout)?.label ?? 'Visão semanal'
     const plannerName = kit.name.trim() || 'Meu Planner'
-    setAnnouncement(`Planner de ${plannerName} na cor ${coverLabel} adicionado à sacola. Itens na sacola: 1.`)
+    const itemCount = kit.cartCount + 1
+    setAnnouncement(`Planner de ${plannerName} na cor ${coverLabel}, com ${layoutLabel.toLowerCase()}, adicionado à sacola. Itens na sacola: ${itemCount}.`)
   }
 
   return (
     <>
       <a className={styles.skipLink} href="#main-content">Pular para o conteúdo</a>
-      <Header cartCount={kit.added ? 1 : 0} />
+      <Header
+        cartCount={kit.cartCount}
+        cartOpen={cartOpen}
+        cartButtonRef={cartButtonRef}
+        onCartClick={() => setCartOpen(true)}
+      />
+      <CartDrawer
+        open={cartOpen}
+        items={kit.cartItems}
+        onClose={() => setCartOpen(false)}
+        onRemove={kit.removeCartItem}
+        returnFocusRef={cartButtonRef}
+      />
       <VisuallyHidden role="status" aria-live="polite" aria-atomic="true">
         {announcement}
       </VisuallyHidden>
